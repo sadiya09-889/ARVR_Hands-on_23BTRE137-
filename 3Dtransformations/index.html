@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Transformations Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+
+    <div id="control-panel">
+        <h2>3D Transformations</h2>
+
+        <div class="control-group">
+            <h3>Translation (Position)</h3>
+            <label>X: <input type="range" id="transX" min="-5" max="5" step="0.1" value="0"></label>
+            <label>Y: <input type="range" id="transY" min="-5" max="5" step="0.1" value="0"></label>
+            <label>Z: <input type="range" id="transZ" min="-5" max="5" step="0.1" value="0"></label>
+        </div>
+
+        <div class="control-group">
+            <h3>Rotation (Degrees)</h3>
+            <label>X: <input type="range" id="rotX" min="0" max="360" step="1" value="0"></label>
+            <label>Y: <input type="range" id="rotY" min="0" max="360" step="1" value="0"></label>
+            <label>Z: <input type="range" id="rotZ" min="0" max="360" step="1" value="0"></label>
+        </div>
+
+        <div class="control-group">
+            <h3>Scaling (Size)</h3>
+            <label>Scale All: <input type="range" id="scaleAll" min="0.1" max="3" step="0.1" value="1"></label>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+        }
+    }
+    </script>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
